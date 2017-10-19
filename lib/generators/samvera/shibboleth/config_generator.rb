@@ -19,4 +19,10 @@ class Samvera::Shibboleth::ConfigGenerator < Rails::Generators::Base
   def install_omniauth_initializer
     copy_file "config/initializers/omniauth.rb"
   end
+
+  def install_setttings
+    copy_file "config/settings.yml"
+    directory "settings", "config/settings"
+  end
+
 end
